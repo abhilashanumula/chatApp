@@ -15,7 +15,7 @@ console.log("Server connected")
          socket.broadcast.emit('joined',{
             name: name,
             count: count
-         });      //send req to user
+         });                                    //send req to user
         })
         socket.on('send', mess=>{                  //get req from user
         // console.log(mess)

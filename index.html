@@ -13,15 +13,26 @@
     </head>
     
     <body>
-        
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li><a href="http://127.0.0.1:8001/contact">Contact</a></li>
-        </ul>
-    </nav>
-    <br>
-    <div id="link">Your Link: <span>hvhbiknk</span></div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li><a href="http://127.0.0.1:8001/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="input">
+            <form action="/" method="post">
+                <input type="text" name="roomid" id="roomid">
+                <button type="submit" id="create">Create</button>
+            </form>
+        </div>
+        <div class="input">
+            <form action="/" method="post">
+                <input type="text" name="joinid" id="joinid">
+                <button type="submit" id="join">Join</button>
+            </form>
+        </div>
+    <div id="link">Your Link: <span></span></div>
     <div>Users ONline: <span id='cont'>1</span></div>
     <br>
     <br>
