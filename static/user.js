@@ -4,12 +4,6 @@
 // const io= require('/weapp.socket.io.js');
 const socket = io('http://localhost:8000');
 
-create.addEventListener('click',e=>{
-    e.preventDefault();
-})
-join.addEventListener('click',e=>{
-    e.preventDefault();
-})
 
 let name1 = prompt("Enter yor name: ");
 socket.emit('new_join',name1);

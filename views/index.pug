@@ -1,0 +1,30 @@
+doctype html 
+head 
+title 
+style 
+    include ../static/style.css
+
+body 
+    nav 
+        ul 
+            li Home 
+            li Contact 
+    <div id="link">Your Link: <span></span></div>
+        <div>Users ONline: <span id='cont'>1</span></div>
+        <br>
+        <br>
+        
+    <div class="container">
+        
+            
+            
+    </div>
+    <div class="send">
+            <form action="#" id="form">
+                <input type="text" name="messInp" id="messInp">
+                <button type="submit" id="btn">Send</button>
+            </form>
+    </div>
+script(src='http://127.0.0.1:8000/socket.io/socket.io.js')
+script 
+    include ../static/user.js

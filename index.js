@@ -37,11 +37,15 @@
 // })
 
 const express = require('express')
+const path = require('path')
+const io = require('socket.io')(8000)
 const app = express();
 
-
 app.use('/static', express.static('static'))
-app.use(express.json())
+app.set('view engine','pug')
+app.set('views',path.join(__dirname,'views'))
+
+
 app.use(express.urlencoded())
 
 app.get('/home',(req,res)=>{
@@ -54,13 +58,12 @@ app.post('/home',(req,res)=>{
     res.redirect(`${name}`)
 })
 
-app.get(`/${name}`, (req, res) => {
-    const io = require('socket.io')(8000)
+app.get(`/:id`, (req, res) => {
 
     let users = {};
     let count = 0;
-
     io.on('connection', socket => {
+
 
         console.log("Server connected")
 
@@ -91,7 +94,8 @@ app.get(`/${name}`, (req, res) => {
         })
 
     })
-    res.sendFile(__dirname+'/static/index.html')
+    // res.sendFile(__dirname + '/index.html')
+    res.render('index',{})
 })
         
 
