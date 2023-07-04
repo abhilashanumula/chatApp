@@ -14,7 +14,7 @@ ChatApp is a real-time chat application built with Node.js, Socket.IO, and HTML.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/chatApp.git`
+1. Clone the repository: `https://github.com/abhilashanumula/chatApp.git`
 2. Navigate to the project directory: `cd chatApp`
 3. Install the dependencies: `npm install`
    
